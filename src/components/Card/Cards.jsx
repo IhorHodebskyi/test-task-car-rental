@@ -1,28 +1,35 @@
-import { Img, Li } from './Cards.styled';
-
+import { Button, DivImg, Img, Li, List, Svg, Title } from './Cards.styled';
+import sprite from '../../img/symbol-defs.svg';
 const Cards = ({ car }) => {
-  console.log(car);
-
   return (
-    <Li key={car.id}>
-      <Img src={car.img || car.photoLink} alt={car.description} />
-      <p>
-        <span>{car.make}</span>
-        <span>{car.model}</span>
-        <span>{car.year}</span>
-        <span>{car.rentalPrice}</span>
-      </p>
+    <>
+      <Li key={car.id}>
+        <DivImg>
+          <Svg>
+            <use href={`${sprite}#icon-normal-1`} />
+          </Svg>
+          <Img src={car.img || car.photoLink} alt={car.description} />
+        </DivImg>
 
-      <p>
-        <span>{car.address}|</span>
-        <span>{car.rentalCompany}|</span>
-        <span>{car.type}|</span>
-        <span>{car.make}|</span>
-        <span>{car.mileage}|</span>
-        <span>{car.accessories[2]}</span>
-      </p>
-      <button>Learn more</button>
-    </Li>
+        <Title>
+          <span>{car.make} </span>
+          <span>{car.model},</span>
+          <span> {car.year}</span>
+          <span>{car.rentalPrice}</span>
+        </Title>
+
+        <List>
+          <span>{car.address.split(' ')[3]}|</span>
+          <span>{car.address.split(' ')[4]}|</span>
+          <span>{car.rentalCompany}|</span>
+          <span>{car.type}|</span>
+          <span>{car.make}|</span>
+          <span>{car.mileage}|</span>
+          <span>{car.accessories[2]}</span>
+        </List>
+        <Button>Learn more</Button>
+      </Li>
+    </>
   );
 };
 export default Cards;

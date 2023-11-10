@@ -1,9 +1,9 @@
-import CarsList from 'components/CarList/CarsList';
+import { NavLink } from 'react-router-dom';
 
 const Home = () => {
   return (
     <>
-      <CarsList />
+      <NavLink to="/catalog">catalog</NavLink>
     </>
   );
 };
