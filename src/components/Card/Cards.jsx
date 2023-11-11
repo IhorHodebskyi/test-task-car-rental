@@ -9,14 +9,37 @@ import {
   Title,
 } from './Cards.styled';
 import sprite from '../../img/symbol-defs.svg';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectFavorites } from 'components/redux/favorite/selectors';
+import { addFavorite, removeFavorite } from 'components/redux/favorite/slice';
 const Cards = ({ car }) => {
+  const dispatch = useDispatch();
+
+  const favoriteCars = useSelector(selectFavorites);
+
+  const isFavorite = favoriteCars.favorites.some(({ id }) => id === car.id);
+
+  const handleToggleFavorite = () => {
+    if (isFavorite) {
+      dispatch(removeFavorite(car));
+    } else {
+      dispatch(addFavorite(car));
+    }
+  };
+
   return (
     <>
       <Li key={car.id} id={car.id}>
         <DivImg>
-          <ButtonSvg>
+          <ButtonSvg onClick={handleToggleFavorite}>
             <Svg>
-              <use href={`${sprite}#icon-normal-1`} />
+              <use
+                href={
+                  isFavorite
+                    ? `${sprite}#icon-active-1`
+                    : `${sprite}#icon-normal-1`
+                }
+              />
             </Svg>
           </ButtonSvg>
           <Img src={car.img || car.photoLink} alt={car.description} />

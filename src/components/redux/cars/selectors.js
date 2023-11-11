@@ -1,5 +1,5 @@
 import { createSelector } from '@reduxjs/toolkit';
-import { selectFilter } from './filter/selectors';
+import { selectFilter } from '../filter/selectors';
 
 export const selectLoading = state => state.cars.isLoading;
 

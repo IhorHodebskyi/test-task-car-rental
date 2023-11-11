@@ -1,8 +1,8 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { selectVisibleCars } from 'components/redux/selectors';
+import { selectVisibleCars } from 'components/redux/cars/selectors';
 
 import { useEffect } from 'react';
-import { fetchCars } from 'components/redux/operations';
+import { fetchCars } from 'components/redux/cars/operations';
 import Cards from 'components/Card/Cards';
 import { Ul } from './CarsList.styled';
 import FormCatalog from 'components/Form/Form';
