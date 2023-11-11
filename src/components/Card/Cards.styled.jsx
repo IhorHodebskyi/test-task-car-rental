@@ -13,10 +13,17 @@ export const DivImg = styled.div`
   margin-bottom: 14px;
 `;
 
-export const Svg = styled.svg`
+export const ButtonSvg = styled.button`
   position: absolute;
   top: 16px;
   right: 16px;
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+`;
+export const Svg = styled.svg`
   width: 18px;
   height: 18px;
 `;
