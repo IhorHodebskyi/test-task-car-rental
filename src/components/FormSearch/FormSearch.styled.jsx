@@ -35,9 +35,22 @@ export const Select = styled(Field)`
   background-repeat: no-repeat, repeat;
   background-position: right 0.7em top 50%, 0 0;
   background-size: 0.65em auto, 100%;
-  &:focus,
-  &:hover {
-    outline-color: #3470ff;
+
+  option {
+    font-weight: normal;
+  }
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 16px;
+
+  transition: all 0.2s ease-out;
+
+  cursor: pointer;
+
+  & + input + & {
+    border-top: 1px solid #c7ccd160;
   }
 `;
 
@@ -87,6 +100,15 @@ export const InputRight = styled(Field)`
   &:focus {
     outline-color: #3470ff;
   }
+`;
+export const LabelTop = styled.label`
+  position: absolute;
+  display: block;
+  left: 0;
+  top: -21px;
+  font-size: 14px;
+  color: rgba(138, 138, 137, 1);
+  font-family: 'Manrope';
 `;
 
 export const LabelLeft = styled.label`

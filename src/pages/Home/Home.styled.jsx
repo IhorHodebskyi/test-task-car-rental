@@ -3,9 +3,11 @@ import { NavLink } from 'react-router-dom';
 
 export const Wrapper = styled.div`
   max-width: 1184px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
   margin: auto;
-  margin-top: 40px;
-  padding-left: 500px;
 `;
 
 export const Link = styled(NavLink)`

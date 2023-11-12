@@ -18,6 +18,7 @@ import {
   Select,
   SelectContainer,
   Option,
+  LabelTop,
 } from './FormSearch.styled';
 
 const FormSearch = () => {
@@ -54,6 +55,8 @@ const FormSearch = () => {
                 </Select>
               </SelectContainer>
               <InputContainer>
+                <LabelTop>Car mileage / km</LabelTop>
+                <LabelLeft htmlFor="From">From</LabelLeft>
                 <LabelLeft htmlFor="From">From</LabelLeft>
                 <InputLeft type="number" name="From" />
                 <LabelRight htmlFor="to">To</LabelRight>
