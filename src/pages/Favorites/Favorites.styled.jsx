@@ -7,3 +7,9 @@ export const Ul = styled.ul`
   max-width: 1184px;
   margin: auto;
 `;
+
+export const Wrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;

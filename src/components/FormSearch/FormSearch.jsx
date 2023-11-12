@@ -17,13 +17,13 @@ import {
   LabelRight,
   Select,
   SelectContainer,
+  Option,
 } from './FormSearch.styled';
 
 const FormSearch = () => {
   const dispatch = useDispatch();
 
   const handleSubmit = values => {
-    console.log(values);
     dispatch(changeFilter(values));
   };
 
@@ -47,9 +47,9 @@ const FormSearch = () => {
                 <Label htmlFor="price">To $</Label>
                 <Select as="select" id="price" name="price">
                   {optionsPrice.map(price => (
-                    <option id={price} value={price}>
+                    <Option id={price} value={price}>
                       {price}
-                    </option>
+                    </Option>
                   ))}
                 </Select>
               </SelectContainer>

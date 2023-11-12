@@ -29,6 +29,14 @@ export const Cross = styled.button`
   font: inherit;
   color: inherit;
   background-color: transparent;
+  width: 24px;
+  height: 24px;
+`;
+
+export const Svg = styled.svg`
+  width: 24px;
+  height: 24px;
+  stroke: #121417;
 `;
 
 export const Image = styled.img`
@@ -107,9 +115,7 @@ export const ConditionList = styled.ul`
   font-size: 12px;
   letter-spacing: -0.24px;
 
-  @media screen and (min-width: 768px) {
-    width: 461px;
-  }
+  width: 461px;
 `;
 
 export const ConditionItem = styled.li`

@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 export const Li = styled.li`
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   width: 274px;
   height: 450px;
 `;

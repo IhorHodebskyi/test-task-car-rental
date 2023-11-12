@@ -25,6 +25,7 @@ export const Button = styled.button`
   cursor: pointer;
   color: #3470ff;
   margin-top: 100px;
+  margin-bottom: 20px;
   width: 500;
   size: 16;
   line-height: 24px;

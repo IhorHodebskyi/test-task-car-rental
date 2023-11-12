@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import sprite from '../../img/symbol-defs.svg';
 import {
   Button,
   ConditionItem,
@@ -12,6 +13,7 @@ import {
   List,
   Overlay,
   Span,
+  Svg,
   TextWrap,
   Title,
   Wrap,
@@ -41,7 +43,11 @@ const Modal = ({ onClose, car }) => {
   return (
     <Overlay onClick={handleClickBackdrop}>
       <Wrapper>
-        <Cross onClick={() => onClose()}>X</Cross>
+        <Cross onClick={() => onClose()}>
+          <Svg>
+            <use href={`${sprite}#icon-x`} />
+          </Svg>
+        </Cross>
         <Image src={car.img} alt={car.make} width="461" height="248" />
         <Wrap>
           <TextWrap>
