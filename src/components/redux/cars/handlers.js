@@ -1,5 +1,5 @@
 export const handleFulfilledCars = (state, { payload }) => {
-  state.entities = payload;
+  state.entities = [...state.entities, ...payload];
 };
 
 export const handleFulfilled = state => {

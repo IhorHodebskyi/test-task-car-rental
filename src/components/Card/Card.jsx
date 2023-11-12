@@ -7,14 +7,13 @@ import {
   List,
   Svg,
   Title,
-} from './Cards.styled';
+} from './Card.styled';
 import sprite from '../../img/symbol-defs.svg';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectFavorites } from 'components/redux/favorite/selectors';
 import { addFavorite, removeFavorite } from 'components/redux/favorite/slice';
-const Cards = ({ car }) => {
+const Card = ({ car }) => {
   const dispatch = useDispatch();
-
   const favoriteCars = useSelector(selectFavorites);
 
   const isFavorite = favoriteCars.favorites.some(({ id }) => id === car.id);
@@ -49,6 +48,7 @@ const Cards = ({ car }) => {
           <span>{car.make} </span>
           <span>{car.model},</span>
           <span> {car.year}</span>
+
           <span>{car.rentalPrice}</span>
         </Title>
 
@@ -66,4 +66,4 @@ const Cards = ({ car }) => {
     </>
   );
 };
-export default Cards;
+export default Card;

@@ -1,40 +1,13 @@
 import { changeFilter } from 'components/redux/filter/filterSlice';
+import {
+  initialValues,
+  optionsModel,
+  optionsPrice,
+} from 'components/utils/utils';
 import { Field, Formik, Form } from 'formik';
 import { useDispatch } from 'react-redux';
 
-const optionsModel = [
-  'Buick',
-  'Volvo',
-  'HUMMER',
-  'Subaru',
-  'Mitsubishi',
-  'Nissan',
-  'Lincoln',
-  'GMC',
-  'Hyundai',
-  'MINI',
-  'Bentley',
-  'Mercedes-Benz',
-  'Aston Martin',
-  'Pontiac',
-  'Lamborghini',
-  'Audi',
-  'BMW',
-  'Chevrolet',
-  'Mercedes-Benz',
-  'Chrysler',
-  'Kia',
-  'Land',
-];
-const initialValues = {
-  make: '',
-  price: '',
-  From: '',
-  to: '',
-};
-const optionsPrice = [30, 40, 50, 60, 70, 80];
-
-const FormCatalog = () => {
+const FormSearch = () => {
   const dispatch = useDispatch();
 
   const handleSubmit = values => {
@@ -74,4 +47,4 @@ const FormCatalog = () => {
     </>
   );
 };
-export default FormCatalog;
+export default FormSearch;

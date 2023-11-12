@@ -10,6 +10,7 @@ export const selectCars = state => state.cars.entities;
 export const selectVisibleCars = createSelector(
   [selectCars, selectFilter],
   (cars, filter) => {
+    console.log(cars);
     return cars
       .filter(car => {
         if (filter.make !== '') {

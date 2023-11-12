@@ -33,6 +33,7 @@ export const Img = styled.img`
 `;
 export const Title = styled.p`
   margin-bottom: 8px;
+
   span {
     font-weight: 500;
     size: 16px;
@@ -56,7 +57,7 @@ export const List = styled.p`
 `;
 
 export const Button = styled.button`
-  padding: 12px 99px 12px 99px;
+  padding: 12px 90px;
   border-radius: 12px;
   border-color: #3470ff;
   color: white;
