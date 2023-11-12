@@ -12,9 +12,12 @@ import sprite from '../../img/symbol-defs.svg';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectFavorites } from 'components/redux/favorite/selectors';
 import { addFavorite, removeFavorite } from 'components/redux/favorite/slice';
+import { useState } from 'react';
+import Modal from 'components/Modal/Modal';
 const Card = ({ car }) => {
   const dispatch = useDispatch();
   const favoriteCars = useSelector(selectFavorites);
+  const [showModal, setShowModal] = useState(false);
 
   const isFavorite = favoriteCars.favorites.some(({ id }) => id === car.id);
 
@@ -26,6 +29,9 @@ const Card = ({ car }) => {
     }
   };
 
+  const toggleModal = () => {
+    setShowModal(!showModal);
+  };
   return (
     <>
       <Li key={car.id} id={car.id}>
@@ -61,7 +67,8 @@ const Card = ({ car }) => {
           <span>{car.mileage}|</span>
           <span>{car.accessories[2]}</span>
         </List>
-        <Button>Learn more</Button>
+        <Button onClick={toggleModal}>Learn more</Button>
+        {showModal && <Modal onClose={toggleModal} car={car} />}
       </Li>
     </>
   );
