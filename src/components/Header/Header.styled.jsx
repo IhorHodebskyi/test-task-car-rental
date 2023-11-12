@@ -2,11 +2,13 @@ import styled from '@emotion/styled';
 import { NavLink } from 'react-router-dom';
 
 export const HeaderWrapper = styled.header`
+  max-width: 1184px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 12px;
   padding: 8px 0;
+  margin: auto;
   margin-bottom: 16px;
   border-bottom: 1px solid black;
 

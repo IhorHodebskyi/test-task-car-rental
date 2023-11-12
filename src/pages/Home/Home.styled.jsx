@@ -2,8 +2,10 @@ import styled from '@emotion/styled';
 import { NavLink } from 'react-router-dom';
 
 export const Wrapper = styled.div`
+  max-width: 1184px;
+  margin: auto;
   margin-top: 40px;
-  padding-left: 200px;
+  padding-left: 500px;
 `;
 
 export const Link = styled(NavLink)`
@@ -13,9 +15,9 @@ export const Link = styled(NavLink)`
   font-weight: 500;
   color: white;
   background-color: orangered;
-  border-color: #3470ff;
+  border-color: #0b44cd;
   color: white;
-  background-color: #3470ff;
+  background-color: #0b44cd;
 `;
 export const Title = styled.h1`
   margin-bottom: 40px;

@@ -1,5 +1,7 @@
 import styled from '@emotion/styled';
 export const Li = styled.li`
+  display: flex;
+  flex-direction: column;
   width: 274px;
   height: 450px;
 `;
@@ -32,6 +34,7 @@ export const Img = styled.img`
   height: 100%;
 `;
 export const Title = styled.p`
+  width: 274px;
   margin-bottom: 8px;
 
   span {
