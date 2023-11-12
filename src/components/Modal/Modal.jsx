@@ -1,13 +1,11 @@
 import { useEffect } from 'react';
 import {
   Button,
-  CloseIcon,
   ConditionItem,
   ConditionList,
   ConditionSpan,
   Cross,
   Description,
-  IconX,
   Image,
   Info,
   Item,
@@ -19,7 +17,6 @@ import {
   Wrap,
   Wrapper,
 } from './Modal.styled';
-import sprite from '../../img/x (1).svg';
 
 const Modal = ({ onClose, car }) => {
   useEffect(() => {
