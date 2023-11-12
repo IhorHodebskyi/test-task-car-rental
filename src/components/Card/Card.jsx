@@ -51,9 +51,11 @@ const Card = ({ car }) => {
         </DivImg>
 
         <Title>
-          <span>{car.make} </span>
-          <span>{car.model},</span>
-          <span> {car.year}</span>
+          <div>
+            <span>{car.make} </span>
+            <span>{car.model},</span>
+            <span> {car.year}</span>
+          </div>
 
           <span>{car.rentalPrice}</span>
         </Title>

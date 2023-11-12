@@ -37,6 +37,8 @@ export const Img = styled.img`
 export const Title = styled.p`
   width: 274px;
   margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
 
   span {
     font-weight: 500;
@@ -48,11 +50,12 @@ export const Title = styled.p`
     color: #3470ff;
   }
   span:last-child {
-    text-align: right;
+    margin-left: 5px;
   }
 `;
 export const List = styled.p`
   span {
+    word-break: break-all;
     font-weight: 400;
     size: 12px;
     line-height: 18px;
