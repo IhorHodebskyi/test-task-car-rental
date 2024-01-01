@@ -1,5 +1,5 @@
-import styled from '@emotion/styled';
-import { NavLink } from 'react-router-dom';
+import styled from "@emotion/styled";
+import { NavLink } from "react-router-dom";
 
 export const HeaderWrapper = styled.header`
   max-width: 1184px;

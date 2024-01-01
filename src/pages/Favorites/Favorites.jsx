@@ -1,5 +1,4 @@
 import { useSelector } from 'react-redux';
-
 import { selectFavorites } from 'components/redux/favorite/selectors';
 import { Ul, Wrapper } from './Favorites.styled';
 import Card from 'components/Card/Card';
